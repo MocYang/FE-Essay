@@ -358,11 +358,13 @@ function throttle(fn: () => void, delay: number) {
 
 *   **宏任务**
 
-    整体代码 script，setTimeout，setInterval，setImmediate（仅在 Node 环境），I/O，requestAnimationFrame（仅在浏览器环境）
+    整体代码 script，setTimeout，setInterval，setImmediate（仅在 Node 环境），I/O，
 
 *   **微任务**
 
     ` Promise.then | catch | finally`，`process.nextTick`（仅在 Node 环境），MutationObserver（仅在浏览器环境）
+    
+    requestAnimationFrame（仅在浏览器环境）
 
 ### 事件循环（Event Loop）
 

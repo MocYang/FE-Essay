@@ -4,3 +4,4 @@ babel 的编译过程分为三个阶段：**parsing**、**transforming**、**gen
 2.  babylon 进行解析得到 AST；
 3.  plugin 用 babel-traverse 对 AST树进行遍历编译，得到新的 AST树；
 4.  用 babel-generator 通过 AST树生成 ES5 代码。
+

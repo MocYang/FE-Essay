@@ -47,7 +47,7 @@ include 表示哪些目录中的文件需要进行 babel-loader，exclude 表示
 }
 ```
 
->   驻：不被解析的文件中不应该包含 require、import 等模块语句
+>   注：不被解析的文件中不应该包含 require、import 等模块语句
 
 ### 优化 resolve.modules 配置
 

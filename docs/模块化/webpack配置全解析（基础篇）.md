@@ -170,7 +170,7 @@ module.exports = {
 
 ### 输出
 
-output 选项用来控制 webpack 如何输入编译后的文件模块；虽然可以有多个 entry，但是只能配置一个 output：
+output 选项用来控制 webpack 如何输出编译后的文件模块；虽然可以有多个 entry，但是只能配置一个 output：
 
 ```js
 module.exports = {
@@ -210,7 +210,7 @@ module.exports = {
 | [id]        | 模块标识符                             |
 | [query]     | 模块的 query                           |
 
-在这里引入 Module、Chunk 和 Bundle 的概念，上面代码中也经常会看到有这两个名词出现，那么它们三者到底有什么区别呢？首先我们发现 module 时经常出现在我们的代码中，比如 `module.exports` ；而 chunk 经常和 entry 一起出现，bundle 总是和 output 一起出现。
+在这里引入 Module、Chunk 和 Bundle 的概念，上面代码中也经常会看到有这两个名词出现，那么它们三者到底有什么区别呢？首先我们发现 module 时常出现在我们的代码中，比如 `module.exports` ；而 chunk 经常和 entry 一起出现，bundle 总是和 output 一起出现。
 
 *   module：我们写的源码，无论是 cjs 还是 esm，都可以理解为一个个 module；
 *   chunk：当我们写的 module 源文件传到 webpack 进行打包时，webpack 会根据文件引用关系生成 chunk 文件，webpack 会对这些 chunk 文件进行一些操作；

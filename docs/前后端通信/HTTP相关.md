@@ -1,6 +1,6 @@
 # HTTP 协议相关
 
->   HTTP（Hyper Text Transfer Protocol）超文本协议的缩写，是一个用于从 WWW 服务器传输超文本到本地浏览器的传输协议。HTTP 是一个应用层协议，有请求和相应构成，是一个标准的客户端和服务器模型
+>   HTTP（Hyper Text Transfer Protocol）超文本协议的缩写，是一个用于从 WWW 服务器传输超文本到本地浏览器的传输协议。HTTP 是一个应用层协议，有请求和响应构成，是一个标准的客户端和服务器模型
 >
 >   特点：
 >
@@ -60,9 +60,9 @@
 
 >   get 和 post 的区别
 >
->   1.  get 请求会被浏览器主动 cache；post 则需要手动设置
+>   1.  get 请求会被浏览器主动 cache；post 则需要手动设置(How?)
 >   2.  get 请求把请求参数放在 url 上，即 HTTP 协议头；post 把参数放在 HTTP 包体内
->   3.  get 请求传输数据量小，一般限制在 2KB 左右，但是执行效率高；post 请求传输数据比较大（IIS4 80KB，IIS5100KB），执行效率稍低
+>   3.  get 请求传输数据量小，一般限制在 2KB 左右(不对，应该是 4KB？)，但是执行效率高；post 请求传输数据比较大（IIS4 80KB，IIS5100KB），执行效率稍低
 >   4.  get 请求只能进行 url 编码；post 请求支持多种编码方式
 >   5.  get 产生的 url 可以加入浏览器书签；post 不可以
 >   6.  get 请求参数会被完整保留在浏览器历史记录；post 请求参数不会被保留

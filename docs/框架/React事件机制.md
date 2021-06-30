@@ -8,7 +8,7 @@ React 事件机制其实是使用了 **事件委托** 的方式，React 在内�
 
 1.  React 合成事件是参照 w3c 标准，抹平了不同浏览器的差异，用户不再需要关注事件的兼容性问题；
 2.  React 将事件都挂载在 document 上，减少了 DOM 节点上的事件信息，能够做到性能的优化；
-3.  React 事件机制其实和 React Virtual DOM 的功能相似，React 团队希望 React 能够在多端运行，而事件的挂载可以在不同运行环境挂载到不同的节点上，从而事件不同端的运行，只需要在事件机制中做兼容处理；
+3.  React 事件机制其实和 React Virtual DOM 的功能相似，React 团队希望 React 能够在多端运行，而事件的挂载可以在不同运行环境挂载到不同的节点上，从而实现不同端的运行，只需要在事件机制中做兼容处理；
 4.  事件分发：React 最新的调度算法 Fiber 会优化交互体验，内部优化浏览器渲染，干预事件分发也可以做更多的优化。
 
 
@@ -33,7 +33,7 @@ React 事件机制我们主要分三部分来说：
 
 *   左边和右边的插件区别在于，simple 就是简单，一般只有一个事件；而右边插件都是由多个事件组合成的事件；
 
-*   SyntheticEvent 是事件的构造函数，SyntheticEvent 对浏览器原生的事件进行 **包装**，生成一个新的 event 对象，里面有合成事件需要的参数，原声 event 变成了 nativeEvent，同时封装了 preventDefault、stopPropagation 等方法，提供了 extend 方法用来继承，采用寄生组合的方式，一些 SyntheticEvent 都是继承自这个构造函数；
+*   SyntheticEvent 是事件的构造函数，SyntheticEvent 对浏览器原生的事件进行 **包装**，生成一个新的 event 对象，里面有合成事件需要的参数，原生 event 变成了 nativeEvent，同时封装了 preventDefault、stopPropagation 等方法，提供了 extend 方法用来继承，采用寄生组合的方式，一些 SyntheticEvent 都是继承自这个构造函数；
 
     ```js
     this.dispatchConfig = dispatchConfig;

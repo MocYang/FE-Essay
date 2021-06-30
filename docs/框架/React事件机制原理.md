@@ -4,7 +4,7 @@
 
 先回顾一下 React 事件机制基本理解，React 自身实现了一套自己的事件机制，包括事件注册、事件合成、事件冒泡、事件派发等，虽然和原生是两码事，但是也是基于浏览器的事件机制下完成的。
 
-我们都知道 React 的所有事件并没有绑定到具体的 DOM 节点，而是绑定到 document 上，然后由统一的事件处理程序来处理，同时也是基于浏览器的事件机制（冒泡），所有节点的时间都会在 document 上触发。
+我们都知道 React 的所有事件并没有绑定到具体的 DOM 节点，而是绑定到 document 上，然后由统一的事件处理程序来处理，同时也是基于浏览器的事件机制（冒泡），所有节点的事件都会在 document 上触发。
 
 ## 试想一下
 
@@ -52,7 +52,7 @@ React 将事件全部统一交给 document 来委托处理的原因是：
 
 SyntheticEvent 是 React 合成事件的基类，定义了合成事件的基础公共属性和方法。
 
-React 会根据当前的事件类型来使用不同的合成事件对象，比如鼠标：点击事件 -- SyntheticMouseEvent，焦点事件 -- SyntheticFocusEvent 等，但都是继承与 SyntheticEvent。
+React 会根据当前的事件类型来使用不同的合成事件对象，比如鼠标：点击事件 -- SyntheticMouseEvent，焦点事件 -- SyntheticFocusEvent 等，但都是继承与于SyntheticEvent。
 
 ![img](https://img.toutiao.io/c/7c060b2495e851dd6ca3d21248373d0e)
 
@@ -66,7 +66,7 @@ React 会根据当前的事件类型来使用不同的合成事件对象，比�
 
 比如说：
 
-当我们给 input 生命一个 onChange 事件，React 帮我们做了很多工作：
+当我们给 input 声明一个 onChange 事件，React 帮我们做了很多工作：
 
 ![img](https://img.toutiao.io/c/0bdf29992204982e5dca47eb0055dd2f)
 

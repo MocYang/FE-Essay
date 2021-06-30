@@ -26,7 +26,7 @@ export type Hook = {
 
 ![](https://user-gold-cdn.xitu.io/2020/7/1/17307e7bb3014026?imageslim)
 
-虽然上面一致都是以 useState 和 useReducer 来作为例子说明，但实际上所有 React Hooks 都是用这种链表的方式来保存的。
+虽然上面一直都是以 useState 和 useReducer 来作为例子说明，但实际上所有 React Hooks 都是用这种链表的方式来保存的。
 
 ## React Hook 是如何更新状态
 
